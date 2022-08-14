@@ -1,0 +1,75 @@
+.rawstage {
+    box-sizing: border-box;
+    position: relative;
+    width: 400px;
+    height: 50px;
+    border-radius: 66px;
+    transform: rotate(-0.37deg);
+    margin-top: 50px;
+    padding: 3px;
+    margin-left: -26px;
+    background: #3CC761;
+    border-radius: 66px;
+    transform: rotate(-0.37deg);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.0918242px;
+}
+
+.materiallist {
+    box-sizing: border-box;
+    position: relative;
+    padding: 25px;
+    margin-top: 1%;
+    margin-left: 5%;
+    height: auto;
+    width: 429px;
+    background: #242424;
+    border-radius: 22px;
+    margin-bottom: 1%;
+}
+
+.material {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.0918242px;
+    color: #FFFFFF;
+}
+
+.line {
+    border: 3px solid #969696;
+    height: 0px;
+    margin: 10px;
+}
+
+.materials {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+/* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.0918242px;
+    
+    color: #FFFFFF;
+    margin-top: 37px;
+    margin-left: -43px;
+}
+
+@media (max-width: 768px) {
+    .materiallist{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 90%;
+    }
+}
