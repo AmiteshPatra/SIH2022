@@ -1,7 +1,10 @@
 import React from "react";
 import "./CustomerHome.css";
+import GreenBlock from "../Images/Group 4 (1).png";
+import YellowBlock from "../Images/Group 5 (1).png";
+import BlueBlock from "../Images/Group 6 (2).png";
 
-const CustomerHome = () => {
+const CustomerHome = (props) => {
   return (
     <div>
       <div className="livetracking container">LIVE TRACKING</div>
@@ -12,8 +15,12 @@ const CustomerHome = () => {
             src="https://cdn.anscommerce.com/image/tr:h-1355,w-1080,cm-pad_resize/data/BIKANERVALA/BIKANO1083_2.png"
             alt=""
           />
-          WAFERS <br></br>
-          0x234fd4a4722ed2
+          <div id = "product_name">
+            {props.product_name}
+          </div>
+          <div id = 'productId'>
+          {props.productId}
+          </div>
         </div>
         <div className="baseinfo container col-12 col-md-6 col-lg-4">
           <div className="row">
@@ -81,12 +88,15 @@ const CustomerHome = () => {
       <div className="stage container">
       <div className="row">
             <div className="mfg col-12 col-md-6 col-lg-4">
+              <img id="greenblock" src={GreenBlock} alt="" />
               <p>Raw Stage</p>
             </div>
             <div className="mfg col-12 col-md-6 col-lg-4">
+            <img id="yellowblock" src={YellowBlock} alt="" />
               <p>Processing Stage</p>
             </div>
             <div className="mfg col-12 col-md-6 col-lg-4">
+            <img id="blueblock" src={BlueBlock} alt="" />
               <p>Market Stage</p>
             </div>
           </div>
