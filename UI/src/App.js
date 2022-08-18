@@ -41,35 +41,41 @@ class App extends Component {
     this.addFarmerDetails = this.addFarmerDetails.bind(this)
     this.addPreProcessorDetails = this.addPreProcessorDetails.bind(this)
     this.addManufacturerDetails = this.addManufacturerDetails.bind(this)
-    this.setProductKey = this.setProductKey.bind(this)
     this.getProductDetails = this.getProductDetails.bind(this)
   }
 
-  addFarmerDetails(batch_no, crop_name, crop_selling_price, crop_quantity) {
-    this.state.model.methods.addFarmerDetails(batch_no, crop_name, crop_selling_price, crop_quantity).send({from: this.state.account, gas:"1000000"}).once('receipt', (receipt) => {
-      alert("Data Added Sucessfully")
-    })
+  addFarmerDetails(batch_no, crop_name, buyer_name, location, crop_quantity, crop_selling_price, selling_date, crop_description) {
+    try {
+      this.state.model.methods.addFarmerDetails(batch_no, crop_name, buyer_name, location, crop_quantity, crop_selling_price, selling_date, crop_description).send({from: this.state.account, gas:"1000000"}).once('receipt', (receipt) => {
+        alert("Data Added Sucessfully")
+      })
+    } catch(err) {
+      alert("Sorry an error occured")
+    }
   }
 
-  addPreProcessorDetails(batch_no, processed_product_name, processed_product_selling_price, processed_product_quantity, raw_batch_no) {
-    this.state.model.methods.addPreProcessorDetails(batch_no, processed_product_name, processed_product_selling_price, processed_product_quantity, raw_batch_no).send({from: this.state.account, gas:"1000000"}).once('receipt', (receipt) => {
-      alert("Data Added Sucessfully")
-    })
+  addPreProcessorDetails(uint_args, string_args, raw_batch_no) {
+    try {
+      this.state.model.methods.addPreProcessorDetails(uint_args, string_args, raw_batch_no).send({from: this.state.account, gas:"1000000"}).once('receipt', (receipt) => {
+        alert("Data Added Sucessfully")
+      })
+    } catch(err) {
+      alert("Sorry an error occured")
+    }
   }
 
-  addManufacturerDetails(batch_no, manufactured_product_name, manufactured_product_selling_price, manufactured_product_quantity, raw_batch_no) {
-    this.state.model.methods.addManufacturerDetails(batch_no, manufactured_product_name, manufactured_product_selling_price, manufactured_product_quantity, raw_batch_no).send({from: this.state.account, gas:"1000000"}).once('receipt', (receipt) => {
-      alert("Data Added Sucessfully")
-    })
-  }
-
-  setProductKey(product_key) {
-    this.setState({product_key})
+  addManufacturerDetails(uint_args, string_args, raw_batch_no) {
+    try {
+      this.state.model.methods.addManufacturerDetails(uint_args, string_args, raw_batch_no).send({from: this.state.account, gas:"1000000"}).once('receipt', (receipt) => {
+        alert("Data Added Sucessfully")
+      })
+    } catch(err) {
+      alert("Sorry an error occured")
+    }
   }
 
   async getProductDetails(product_key) {
     const product_name = await this.state.model.methods.manufacturerDetailsMap(product_key).call()
-    console.log(product_name['1'])
     this.setState({product_name: product_name['1']})
   }
 
@@ -78,20 +84,16 @@ class App extends Component {
       <>
         <Router>
           <div className="App">
-            <Header setProductKey = {this.setProductKey} />
-            <button className="btn btn-outline-success" type="submit" onClick = {(event) => {
-                console.log(this.state.product_key)
-                }}>
-            </button>
+            <Header />
             {/* <CustomerHome /> */}
-            {/* <InputForProducer addFarmerDetails = {this.addFarmerDetails} />*/}
             {/* <InputCategoryChoice /> */}
-            {/* <InputForManufacturer addManufacturerDetails = {this.addManufacturerDetails} /> */}
+            {/* <InputForProducer addFarmerDetails = {this.addFarmerDetails} /> */}
             {/* <InputForPreProcessor addPreProcessorDetails = {this.addPreProcessorDetails} /> */}
+             <InputForManufacturer addManufacturerDetails = {this.addManufacturerDetails} /> 
             {/* <ManufacturingDetail /> */}
             {/* <RawStage /> */} 
             {/* <ProcessingStage />*/} 
-             <MainInput getProductDetails = {this.getProductDetails} product_name = {this.state.product_name}/> 
+            {/* <MainInput getProductDetails = {this.getProductDetails} product_name = {this.state.product_name}/> */}
             {/* <Routes>
                   <Route path="/home" element={<Home />} />
                   <Route path="/login" element={<Login />} />

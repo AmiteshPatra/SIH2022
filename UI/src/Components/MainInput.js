@@ -9,15 +9,17 @@ const MainInput = (props) => {
 
   const onChangeValue =(e)=> {
     setProduct_id(e.target.value);
-    console.log(product_id);
+  }
+
+  const checkKeyDown = (e) => {
+    if (e.code === 'Enter') e.preventDefault();
   }
 
   const onSubmitValue =(e)=> {
     e.preventDefault();
     setProduct_id(product_id);
-    console.log(product_id);
-    setPage_switch(1);
     props.getProductDetails(product_id)
+    setPage_switch(1)
   }
 
   
@@ -27,7 +29,7 @@ const MainInput = (props) => {
       else
       {return (
     <div>
-      <form className="d-flex">
+      <form className="d-flex" onSubmit={onSubmitValue}>
         <input
           value={product_id}
           id="mainsearch"

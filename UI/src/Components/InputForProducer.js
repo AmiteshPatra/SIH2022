@@ -22,13 +22,13 @@ class InputForProducer extends Component {
           <div className="row">
             <div className="w1 col-6">BUYER'S NAME</div>
             <div className="w2 col-6">
-              <input type="text"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <input type="text" ref = {(input) => this.buyer_name = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
           <div className="row">
             <div className="w1 col-6">LOCATION</div>
             <div className="w2 col-6">
-              <input type="text"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <input type="text" ref = {(input) => this.location = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
           <div className="row">
@@ -46,16 +46,16 @@ class InputForProducer extends Component {
           <div className="row">
             <div className="w1 col-6">SELLING DATE</div>
             <div className="w2 col-6">
-              <input type="date"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <input type="date" ref = {(input) => this.selling_date = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
           <div className="row">
             <div className="w1 col-6">DESCRIPTION</div>
             <div className="w2 col-6">
-              <textarea type="text"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <textarea type="text" ref = {(input) => this.crop_description = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
-          <button type="submit" className="btn1 btn-success" onClick = {(event) => {this.props.addFarmerDetails(this.batch_no.value,this.crop_name.value,this.crop_selling_price.value,this.crop_quantity.value)}}>
+          <button type="submit" className="btn1 btn-success" onClick = {(event) => {this.props.addFarmerDetails(this.batch_no.value, this.crop_name.value, this.buyer_name.value, this.location.value, this.crop_quantity.value, this.crop_selling_price.value, this.selling_date.value, this.crop_description.value)}}>
             SUBMIT
           </button>
         </div>

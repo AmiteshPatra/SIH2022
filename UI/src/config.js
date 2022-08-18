@@ -1,4 +1,4 @@
-export const MODEL_ADDRESS = '0x5D2EB5cb13Cf4bE16BcF8111F926670E2B266fcf'
+export const MODEL_ADDRESS = '0xE230A782BB206867097A69a11f4082b33CC86041'
 export const MODEL_ABI = [
     {
       "constant": true,
@@ -15,16 +15,44 @@ export const MODEL_ABI = [
           "type": "uint256"
         },
         {
-          "name": "manufactured_product_name",
-          "type": "string"
+          "name": "manufactured_product_quantity",
+          "type": "uint256"
+        },
+        {
+          "name": "manufactured_product_mrp",
+          "type": "uint256"
         },
         {
           "name": "manufactured_product_selling_price",
           "type": "uint256"
         },
         {
-          "name": "manufactured_product_quantity",
-          "type": "uint256"
+          "name": "manufactured_product_name",
+          "type": "string"
+        },
+        {
+          "name": "manufactured_product_buyer_name",
+          "type": "string"
+        },
+        {
+          "name": "manufactured_product_loaction",
+          "type": "string"
+        },
+        {
+          "name": "manufactured_product_selling_date",
+          "type": "string"
+        },
+        {
+          "name": "manufactured_product_mfg_date",
+          "type": "string"
+        },
+        {
+          "name": "manufactured_product_exp_date",
+          "type": "string"
+        },
+        {
+          "name": "manufactured_product_description",
+          "type": "string"
         }
       ],
       "payable": false,
@@ -51,12 +79,28 @@ export const MODEL_ABI = [
           "type": "string"
         },
         {
-          "name": "crop_selling_price",
-          "type": "uint256"
+          "name": "buyer_name",
+          "type": "string"
+        },
+        {
+          "name": "location",
+          "type": "string"
         },
         {
           "name": "crop_quantity",
           "type": "uint256"
+        },
+        {
+          "name": "crop_selling_price",
+          "type": "uint256"
+        },
+        {
+          "name": "selling_date",
+          "type": "string"
+        },
+        {
+          "name": "crop_description",
+          "type": "string"
         }
       ],
       "payable": false,
@@ -103,16 +147,36 @@ export const MODEL_ABI = [
           "type": "uint256"
         },
         {
-          "name": "processed_product_name",
-          "type": "string"
+          "name": "processed_product_quantity",
+          "type": "uint256"
         },
         {
           "name": "processed_product_selling_price",
           "type": "uint256"
         },
         {
-          "name": "processed_product_quantity",
-          "type": "uint256"
+          "name": "processed_product_name",
+          "type": "string"
+        },
+        {
+          "name": "processed_product_buyer_name",
+          "type": "string"
+        },
+        {
+          "name": "processed_product_location",
+          "type": "string"
+        },
+        {
+          "name": "processed_product_preocessing_date",
+          "type": "string"
+        },
+        {
+          "name": "processed_product_selling_date",
+          "type": "string"
+        },
+        {
+          "name": "processed_product_description",
+          "type": "string"
         }
       ],
       "payable": false,
@@ -194,12 +258,28 @@ export const MODEL_ABI = [
           "type": "string"
         },
         {
-          "name": "_crop_selling_price",
-          "type": "uint256"
+          "name": "_buyer_name",
+          "type": "string"
+        },
+        {
+          "name": "_location",
+          "type": "string"
         },
         {
           "name": "_crop_quantity",
           "type": "uint256"
+        },
+        {
+          "name": "_crop_selling_price",
+          "type": "uint256"
+        },
+        {
+          "name": "_selling_date",
+          "type": "string"
+        },
+        {
+          "name": "_crop_description",
+          "type": "string"
         }
       ],
       "name": "addFarmerDetails",
@@ -207,26 +287,18 @@ export const MODEL_ABI = [
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function",
-      "signature": "0x8c0e43f4"
+      "signature": "0x5eddd96f"
     },
     {
       "constant": false,
       "inputs": [
         {
-          "name": "_batch_no",
-          "type": "uint256"
+          "name": "_uint_args",
+          "type": "uint256[3]"
         },
         {
-          "name": "_processed_product_name",
-          "type": "string"
-        },
-        {
-          "name": "_processed_product_selling_price",
-          "type": "uint256"
-        },
-        {
-          "name": "_processed_product_quantity",
-          "type": "uint256"
+          "name": "_string_args",
+          "type": "string[6]"
         },
         {
           "name": "_raw_batch_no",
@@ -238,26 +310,18 @@ export const MODEL_ABI = [
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function",
-      "signature": "0x6ed435d9"
+      "signature": "0x0fb77673"
     },
     {
       "constant": false,
       "inputs": [
         {
-          "name": "_batch_no",
-          "type": "uint256"
+          "name": "_uint_args",
+          "type": "uint256[4]"
         },
         {
-          "name": "_manufactured_product_name",
-          "type": "string"
-        },
-        {
-          "name": "_manufactured_product_selling_price",
-          "type": "uint256"
-        },
-        {
-          "name": "_manufactured_product_quantity",
-          "type": "uint256"
+          "name": "_string_args",
+          "type": "string[7]"
         },
         {
           "name": "_raw_batch_no",
@@ -269,6 +333,6 @@ export const MODEL_ABI = [
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function",
-      "signature": "0xbed924a0"
+      "signature": "0x88ea6fb9"
     }
   ]

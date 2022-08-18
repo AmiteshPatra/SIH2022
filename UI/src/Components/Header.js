@@ -47,10 +47,7 @@ class Header extends Component {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit" onClick = {(event) => {
-                event.preventDefault()
-                this.props.setProductKey(this.product_key.value)
-                }}>
+              <button className="btn btn-outline-success" type="submit">
                 Search
               </button>
               <div className="nav-item">

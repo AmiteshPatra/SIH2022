@@ -23,13 +23,13 @@ class InputForPreProcessor extends Component {
           <div className="row">
             <div className="w1 col-6">BUYER'S NAME</div>
             <div className="w2 col-6">
-              <input type="text"  style={{color:"white"}}  className=" w3 form-control" placeholder="" />
+              <input type="text" ref = {(input) => this.processed_product_buyer_name = input} style={{color:"white"}}  className=" w3 form-control" placeholder="" />
             </div>
           </div>
           <div className="row">
             <div className="w1 col-6">LOCATION</div>
             <div className="w2 col-6">
-              <input type="text"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <input type="text" ref = {(input) => this.processed_product_location = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
           <div className="row">
@@ -39,33 +39,21 @@ class InputForPreProcessor extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="w1 col-6">SELLING PRICE</div>
+            <div className="w1 col-6">PROCESSED DATE</div>
             <div className="w2 col-6">
-              <input type="text" ref = {(input) => this.processed_product_selling_price = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <input type="date" ref = {(input) => this.processed_product_preocessing_date = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
           <div className="row">
             <div className="w1 col-6">SELLING DATE</div>
             <div className="w2 col-6">
-              <input type="date"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <input type="date" ref = {(input) => this.processed_product_selling_date = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
           <div className="row">
-            <div className="w1 col-6">MRP</div>
+            <div className="w1 col-6">SELLING PRICE</div>
             <div className="w2 col-6">
-              <input type="text"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
-            </div>
-          </div>
-          <div className="row">
-            <div className="w1 col-6">EXPIRE DATE</div>
-            <div className="w2 col-6">
-              <input type="date"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
-            </div>
-          </div>
-          <div className="row">
-            <div className="w1 col-6">PROCESSED DATE</div>
-            <div className="w2 col-6">
-              <input type="date"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <input type="text" ref = {(input) => this.processed_product_selling_price = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
            <div className="row">
@@ -77,10 +65,13 @@ class InputForPreProcessor extends Component {
           <div className="row">
             <div className="w1 col-6">DESCRIPTION</div>
             <div className="w2 col-6">
-              <textarea type="text"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <textarea type="text" ref = {(input) => this.processed_product_description = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
-          <button type="submit" className="btn1 btn-success" onClick = {(event) => this.props.addPreProcessorDetails(this.batch_no.value, this.processed_product_name.value, this.processed_product_selling_price.value, this.processed_product_quantity.value, this.raw_batch_no.value.split(','))}>
+          <button type="submit" className="btn1 btn-success" onClick = {(event) => this.props.addPreProcessorDetails(
+            [this.batch_no.value, this.processed_product_quantity.value, this.processed_product_selling_price.value],
+            [this.processed_product_name.value, this.processed_product_buyer_name.value, this.processed_product_location.value, this.processed_product_preocessing_date.value, this.processed_product_selling_date.value, this.processed_product_description.value],
+            this.raw_batch_no.value.split(','))}>
             SUBMIT
           </button>
         </div>

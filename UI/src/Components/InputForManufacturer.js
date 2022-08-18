@@ -23,13 +23,13 @@ class InputForManufacturer extends Component {
           <div className="row">
             <div className="w1 col-6">BUYER'S NAME</div>
             <div className="w2 col-6">
-              <input type="text"  style={{color:"white"}}  className=" w3 form-control" placeholder="" />
+              <input type="text" ref = {(input) => this.manufactured_product_buyer_name = input} style={{color:"white"}}  className=" w3 form-control" placeholder="" />
             </div>
           </div>
           <div className="row">
             <div className="w1 col-6">LOCATION</div>
             <div className="w2 col-6">
-              <input type="text"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <input type="text" ref = {(input) => this.manufactured_product_loaction = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
           <div className="row">
@@ -47,25 +47,25 @@ class InputForManufacturer extends Component {
           <div className="row">
             <div className="w1 col-6">SELLING DATE</div>
             <div className="w2 col-6">
-              <input type="date"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
-            </div>
-          </div>
-          <div className="row">
-            <div className="w1 col-6">MRP</div>
-            <div className="w2 col-6">
-              <input type="text"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
-            </div>
-          </div>
-          <div className="row">
-            <div className="w1 col-6">EXPIRE DATE</div>
-            <div className="w2 col-6">
-              <input type="date"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <input type="date" ref = {(input) => this.manufactured_product_selling_date = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
           <div className="row">
             <div className="w1 col-6">MFG. DATE</div>
             <div className="w2 col-6">
-              <input type="date"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <input type="date" ref = {(input) => this.manufactured_product_mfg_date = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
+            </div>
+          </div>
+          <div className="row">
+            <div className="w1 col-6">EXPIRE DATE</div>
+            <div className="w2 col-6">
+              <input type="date" ref = {(input) => this.manufactured_product_exp_date = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
+            </div>
+          </div>
+          <div className="row">
+            <div className="w1 col-6">MRP</div>
+            <div className="w2 col-6">
+              <input type="text" ref = {(input) => this.manufactured_product_mrp = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
           <div className="row">
@@ -77,10 +77,13 @@ class InputForManufacturer extends Component {
           <div className="row">
             <div className="w1 col-6">DESCRIPTION</div>
             <div className="w2 col-6">
-              <textarea type="text"  style={{color:"white"}} className=" w3 form-control" placeholder="" />
+              <textarea type="text" ref = {(input) => this.manufactured_product_description = input} style={{color:"white"}} className=" w3 form-control" placeholder="" />
             </div>
           </div>
-          <button type="submit" className="btn1 btn-success" onClick = {(event) => this.props.addManufacturerDetails(this.batch_no.value, this.manufactured_product_name.value, this.manufactured_product_selling_price.value, this.manufactured_product_quantity.value, this.raw_batch_no.value.split(','))}>
+          <button type="submit" className="btn1 btn-success" onClick = {(event) => this.props.addManufacturerDetails(
+            [this.batch_no.value, this.manufactured_product_quantity.value, this.manufactured_product_mrp.value, this.manufactured_product_selling_price.value],
+            [this.manufactured_product_name.value, this.manufactured_product_buyer_name.value, this.manufactured_product_loaction.value, this.manufactured_product_selling_date.value, this.manufactured_product_mfg_date.value, this.manufactured_product_exp_date.value, this.manufactured_product_description],
+            this.raw_batch_no.value.split(','))}>
             SUBMIT
           </button>
         </div>

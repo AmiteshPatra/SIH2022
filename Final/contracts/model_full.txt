@@ -1,0 +1,139 @@
+pragma solidity <=0.6.0;
+
+contract Model {
+    
+    mapping(uint => uint[]) public preprocessorHash;
+    mapping(uint => uint[]) public manufacturerHash;
+
+    function addPreProcessorHashDetails(uint _product_batch_no, uint[] memory _raw_batch_no_arr) public {
+        preprocessorHash[_product_batch_no] = _raw_batch_no_arr;
+    }
+
+    function addManufacturerHashDetails(uint _product_batch_no, uint[] memory _raw_batch_no_arr) public {
+        manufacturerHash[_product_batch_no] = _raw_batch_no_arr;
+    }
+
+    struct FarmerDetails {
+        uint batch_no;
+        string crop_name;
+        string buyer_name;
+        string location;
+        uint crop_quantity;
+        uint crop_selling_price;
+        string selling_date;
+        string crop_description;
+    }
+
+    mapping(uint => FarmerDetails) public farmerDetailsMap;
+
+    function addFarmerDetails(
+        uint _batch_no,
+        string memory _crop_name,
+        string memory _buyer_name,
+        string memory _location,
+        uint _crop_quantity,
+        uint _crop_selling_price,
+        string memory _selling_date,
+        string memory _crop_description
+    ) public {
+        farmerDetailsMap[_batch_no] = FarmerDetails(
+                                            _batch_no,
+                                            _crop_name,
+                                            _buyer_name,
+                                            _location,
+                                            _crop_quantity,
+                                            _crop_selling_price,
+                                            _selling_date,
+                                            _crop_description);
+    }
+
+    struct PreProcessorDetails {
+        uint batch_no;
+        string processed_product_name;
+        string processed_product_buyer_name;
+        string processed_product_location;
+        uint processed_product_quantity;
+        string processed_product_preocessing_date;
+        uint processed_product_selling_price;
+        string processed_product_selling_date;
+        uint[] raw_batch_no;
+        string processed_product_description;
+    }
+
+    mapping(uint => PreProcessorDetails) public preProcessorDetailsMap;
+
+    function addPreProcessorDetails(
+        uint _batch_no,
+        string memory _processed_product_name,
+        string memory _processed_product_buyer_name,
+        string memory _processed_product_location,
+        uint _processed_product_quantity,
+        string memory _processed_product_preprocessing_date,
+        uint _processed_product_selling_price,
+        string memory _processed_product_selling_date,
+        uint[] memory _raw_batch_no,
+        string memory _processed_product_description
+    ) public {
+        preProcessorDetailsMap[_batch_no] = PreProcessorDetails(
+                                                    _batch_no,
+                                                    _processed_product_name,
+                                                    _processed_product_buyer_name,
+                                                    _processed_product_location,
+                                                    _processed_product_quantity,
+                                                    _processed_product_preprocessing_date,
+                                                    _processed_product_selling_price,
+                                                    _processed_product_selling_date,
+                                                    _raw_batch_no,
+                                                    _processed_product_description);
+        
+        addPreProcessorHashDetails(_batch_no, _raw_batch_no);
+    }
+
+    struct ManufacturerDetails {
+        uint batch_no;
+        string manufactured_product_name;
+        string manufactured_product_buyer_name;
+        string manufactured_product_loaction;
+        uint manufactured_product_quantity;
+        string manufactured_product_selling_price;
+        string manufactured_product_selling_date;
+        string manufactured_product_mfg_date;
+        string manufactured_product_exp_date;
+        uint manufactured_product_mrp;
+        uint[] raw_batch_no;
+        string manufactured_product_description;
+    }
+
+    mapping(uint => ManufacturerDetails) public manufacturerDetailsMap;
+
+    function addManufacturerDetails(
+        uint _batch_no,
+        string memory _manufactured_product_name,
+        string memory _manufactured_product_buyer_name,
+        string memory _manufactured_product_loaction,
+        uint _manufactured_product_quantity,
+        string memory _manufactured_product_selling_price,
+        string memory _manufactured_product_selling_date,
+        string memory _manufactured_product_mfg_date,
+        string memory _manufactured_product_exp_date,
+        uint _manufactured_product_mrp,
+        uint[] memory _raw_batch_no,
+        string memory _manufactured_product_description
+    ) public {
+        manufacturerDetailsMap[_batch_no] = ManufacturerDetails(
+                                                    _batch_no,
+                                                    _manufactured_product_name,
+                                                    _manufactured_product_buyer_name,
+                                                    _manufactured_product_loaction,
+                                                    _manufactured_product_quantity,
+                                                    _manufactured_product_selling_price,
+                                                    _manufactured_product_selling_date,
+                                                    _manufactured_product_mfg_date,
+                                                    _manufactured_product_exp_date,
+                                                    _manufactured_product_mrp,
+                                                    _raw_batch_no,
+                                                    _manufactured_product_description);
+
+        addManufacturerHashDetails(_batch_no, _raw_batch_no);
+    }
+}
