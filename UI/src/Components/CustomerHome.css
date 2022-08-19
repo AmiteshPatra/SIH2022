@@ -81,7 +81,12 @@
 }
 
 .mfg {
-    padding-top: 16px;
+    padding-top: 22px;
+    font-size: xx-large;
+}
+
+.mfg2 {
+    padding-top: 28px;
     font-size: xx-large;
 }
 

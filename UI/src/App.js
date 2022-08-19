@@ -35,8 +35,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      account: '',
-      product_name: ''
+      account: ''
     }
     this.addFarmerDetails = this.addFarmerDetails.bind(this)
     this.addPreProcessorDetails = this.addPreProcessorDetails.bind(this)
@@ -76,7 +75,8 @@ class App extends Component {
 
   async getProductDetails(product_key) {
     const product_name = await this.state.model.methods.manufacturerDetailsMap(product_key).call()
-    this.setState({product_name: product_name['1']})
+    this.setState({product_name})
+    // console.log(product_name)
   }
 
   render() {
@@ -89,11 +89,11 @@ class App extends Component {
             {/* <InputCategoryChoice /> */}
             {/* <InputForProducer addFarmerDetails = {this.addFarmerDetails} /> */}
             {/* <InputForPreProcessor addPreProcessorDetails = {this.addPreProcessorDetails} /> */}
-             <InputForManufacturer addManufacturerDetails = {this.addManufacturerDetails} /> 
+            {/* <InputForManufacturer addManufacturerDetails = {this.addManufacturerDetails} /> */}
             {/* <ManufacturingDetail /> */}
             {/* <RawStage /> */} 
             {/* <ProcessingStage />*/} 
-            {/* <MainInput getProductDetails = {this.getProductDetails} product_name = {this.state.product_name}/> */}
+             <MainInput getProductDetails = {this.getProductDetails} product_name = {this.state.product_name}/> 
             {/* <Routes>
                   <Route path="/home" element={<Home />} />
                   <Route path="/login" element={<Login />} />

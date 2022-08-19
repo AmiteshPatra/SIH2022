@@ -84,18 +84,18 @@ contract Model {
     }
 
     struct ManufacturerDetails {
-        uint batch_no;
-        uint manufactured_product_quantity;
-        uint manufactured_product_mrp;
-        uint manufactured_product_selling_price;
-        string manufactured_product_name;
-        string manufactured_product_buyer_name;
-        string manufactured_product_loaction;
-        string manufactured_product_selling_date;
-        string manufactured_product_mfg_date;
-        string manufactured_product_exp_date;
-        string manufactured_product_description;
-        uint[] raw_batch_no;
+        uint batch_no;                              //0
+        uint manufactured_product_quantity;         //1            
+        uint manufactured_product_mrp;              //2        
+        uint manufactured_product_selling_price;    //3                    
+        string manufactured_product_name;           //4            
+        string manufactured_product_buyer_name;     //5                
+        string manufactured_product_loaction;       //6                
+        string manufactured_product_selling_date;   //7                    
+        string manufactured_product_mfg_date;       //8                
+        string manufactured_product_exp_date;       //9                
+        string manufactured_product_description;    //10                    
+        uint[] raw_batch_no;                        //11
     }
 
     mapping(uint => ManufacturerDetails) public manufacturerDetailsMap;
