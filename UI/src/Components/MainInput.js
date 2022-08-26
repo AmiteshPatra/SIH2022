@@ -19,12 +19,14 @@ const MainInput = (props) => {
     e.preventDefault();
     setProduct_id(product_id);
     props.getProductDetails(product_id)
+    props.getRawProductDetails(product_id)
+    //console.log(props.raw_products)
     setPage_switch(1)
   }
 
   
     if(page_switch == 1){
-      return (<CustomerHome productId={product_id} product_name = {props.product_name} />);
+      return (<CustomerHome productId={product_id} product_name = {props.product_name} getRawProductDetails = {props.getRawProductDetails} raw_products = {props.raw_products} getRawProductName = {props.getRawProductName} product_name_array = {props.product_name_array} />);
     }
       else
       {return (

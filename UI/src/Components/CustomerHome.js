@@ -9,10 +9,13 @@ import ProcessingStage from "./ProcessingStage"
 const CustomerHome = (props) => {
   const [page, changePage] = useState("")
   var product_details
+  var raw_details
   try{product_details = props.product_name}
   catch(err) {}
+  //console.log(product_details)
 
   const loadRawDetails =(e)=> {
+    //props.getRawProductDetails()
     changePage("raw")
   }
 
@@ -21,7 +24,8 @@ const CustomerHome = (props) => {
   }
 
   if(page == "raw") {
-    return (<RawStage />);
+    //console.log(props.raw_products)
+    return (<RawStage raw_products = {props.raw_products} getRawProductName = {props.getRawProductName} product_name_array = {props.product_name_array} />);
   }
   else if(page == "processing") {
     return (<ProcessingStage />);

@@ -1,4 +1,4 @@
-export const MODEL_ADDRESS = '0xE230A782BB206867097A69a11f4082b33CC86041'
+export const MODEL_ADDRESS = '0x6e15dF10aa4FBb16148d5a113B60F8fFBCd54a08'
 export const MODEL_ABI = [
     {
       "constant": true,
@@ -59,6 +59,26 @@ export const MODEL_ABI = [
       "stateMutability": "view",
       "type": "function",
       "signature": "0x476ca6f6"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "raw_products",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x55cece13"
     },
     {
       "constant": true,
@@ -334,5 +354,35 @@ export const MODEL_ABI = [
       "stateMutability": "nonpayable",
       "type": "function",
       "signature": "0x88ea6fb9"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_product_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getRawProductDetails",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x5de576f5"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "returnRawProductDetails",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x4a975cbf"
     }
   ]

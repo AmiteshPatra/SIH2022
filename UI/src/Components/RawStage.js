@@ -1,7 +1,14 @@
 import React from "react";
 import "./RawStage.css";
 
-const RawStage = () => {
+const RawStage = (props) => {
+
+  const loadRawDetails =(e)=> {
+    props.getRawProductName(props.raw_products)
+  }
+
+  loadRawDetails()
+
   return (
     <div>
       <div className="rawstage container">RAW STAGE</div>
@@ -9,10 +16,8 @@ const RawStage = () => {
         <p className="material">MATERIAL</p>
         <div className="line"></div>
         <ul className="materials">
-                Potato<br/>
-                Vegetable Oil<br/>
-                Salt<br/>
         </ul>
+          {(props.product_name_array != undefined)? props.product_name_array.map(crop => (<div className = "crop">{crop}</div>)) : "N.A."}
       </div>
     </div>
   );

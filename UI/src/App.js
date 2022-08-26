@@ -41,6 +41,8 @@ class App extends Component {
     this.addPreProcessorDetails = this.addPreProcessorDetails.bind(this)
     this.addManufacturerDetails = this.addManufacturerDetails.bind(this)
     this.getProductDetails = this.getProductDetails.bind(this)
+    this.getRawProductDetails = this.getRawProductDetails.bind(this)
+    this.getRawProductName = this.getRawProductName.bind(this)
   }
 
   addFarmerDetails(batch_no, crop_name, buyer_name, location, crop_quantity, crop_selling_price, selling_date, crop_description) {
@@ -79,6 +81,23 @@ class App extends Component {
     // console.log(product_name)
   }
 
+  async getRawProductDetails(product_key) {
+    this.state.model.methods.getRawProductDetails(product_key).send({from: this.state.account, gas:"1000000"})
+    const raw_products = await this.state.model.methods.returnRawProductDetails().call()
+    this.setState({raw_products})
+    // console.log(raw_products)
+  }
+
+  async getRawProductName(raw_product_array) {
+    var product_name_array = []
+    var temp;
+    for(var i = 0; i < raw_product_array.length; i++) {
+      temp = await this.state.model.methods.farmerDetailsMap(raw_product_array[i]).call()
+      product_name_array.push(temp['1'])
+    }
+    this.setState({product_name_array})
+  }
+
   render() {
     return (
       <>
@@ -91,9 +110,9 @@ class App extends Component {
             {/* <InputForPreProcessor addPreProcessorDetails = {this.addPreProcessorDetails} /> */}
             {/* <InputForManufacturer addManufacturerDetails = {this.addManufacturerDetails} /> */}
             {/* <ManufacturingDetail /> */}
-            {/* <RawStage /> */} 
-            {/* <ProcessingStage />*/} 
-             <MainInput getProductDetails = {this.getProductDetails} product_name = {this.state.product_name}/> 
+            {/* <RawStage /> */}
+            {/* <ProcessingStage />*/}
+             <MainInput getProductDetails = {this.getProductDetails} product_name = {this.state.product_name} getRawProductDetails = {this.getRawProductDetails} raw_products = {this.state.raw_products} getRawProductName = {this.getRawProductName} product_name_array = {this.state.product_name_array}/> 
             {/* <Routes>
                   <Route path="/home" element={<Home />} />
                   <Route path="/login" element={<Login />} />
