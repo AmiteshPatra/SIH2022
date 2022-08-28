@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+.desktop-1 {
+  align-items: flex-start;
+  background-color: 
+#000000e6;
+  display: flex;
+  height: 993px;
+  padding: 61px 515px;
+  width: 1483px;
+}
+
+.overlap-group {
+  align-items: center;
+  background-color: 
+#0000005c;
+  border-radius: 17.99px;
+  box-shadow: 0px 0px 13.49px 0.75px 
+#ffffff;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1px;
+  min-height: 701px;
+  padding: 33.5px 52.5px;
+  width: 452px;
+}
+
+.title {
+  color: var(--white);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: -0.22px;
+  margin-left: 0.81px;
+  min-height: 37px;
+  min-width: 102px;
+  text-align: center;
+}
+
+.overlap-group5 {
+  align-items: flex-start;
+  align-self: flex-end;
+  background-color: var(--gravel);
+  border-radius: 3.75px;
+  display: flex;
+  height: 55px;
+  justify-content: flex-end;
+  margin-top: 57px;
+  min-width: 346px;
+  padding: 12.6px 6.5px;
+}
+
+.username,
+.password {
+  background-color: 
+transparent;
+  border: 0;
+  height: 28px;
+  letter-spacing: 0.15px;
+  padding: 0;
+  width: 331px;
+}
+
+.username::placeholder,
+.password::placeholder {
+  color: 
+#ffffff71;
+}
+
+.overlap-group3 {
+  align-items: flex-start;
+  align-self: flex-end;
+  background-color: var(--gravel);
+  border-radius: 3.75px;
+  display: flex;
+  height: 55px;
+  justify-content: flex-end;
+  margin-top: 46px;
+  min-width: 346px;
+  padding: 12.6px 6.5px;
+}
+
+.forgot-password {
+  align-self: flex-start;
+  letter-spacing: 0.15px;
+  margin-left: 3px;
+  margin-top: 20px;
+  min-height: 23px;
+  min-width: 171px;
+  text-align: center;
+}
+
+.overlap-group4 {
+  align-self: flex-end;
+  border-radius: 3.75px;
+  height: 55px;
+  margin-top: 54px;
+  position: relative;
+  width: 346px;
+}
+
+.rectangle-3 {
+  background-color: 
+#00ff0096;
+  border-radius: 3.75px;
+  cursor: pointer;
+  height: 55px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 346px;
+}
+
+.lets-go {
+  color: var(--white);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  left: 124px;
+  letter-spacing: 0.15px;
+  position: absolute;
+  text-align: center;
+  top: 12px;
+}
+
+.not-a-member-sign-up-now {
+  letter-spacing: 0.15px;
+  margin-left: 1.4px;
+  margin-top: 20px;
+  min-height: 23px;
+  min-width: 278px;
+  text-align: center;
+}
+
+.or {
+  color: 
+#ffffffb8;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: -0.22px;
+  margin-top: 41px;
+  min-height: 37px;
+  min-width: 72px;
+  text-align: center;
+}
+
+.overlap-group-container {
+  align-items: flex-start;
+  display: flex;
+  margin-left: 1px;
+  margin-top: 34px;
+  min-width: 169px;
+}
+
+.overlap-group2 {
+  background-image: url('https://img.icons8.com/color/48/000000/facebook-new.png') ;
+  align-self: flex-end;
+  background-color: var(--white);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 9px;
+  height: 67px;
+  width: 67px;
+}
+
+.overlap-group1 {
+  /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg'); */
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 9px;
+  display: flex;
+  height: 67px;
+  justify-content: flex-end;
+  margin-left: 35px;
+  min-width: 67px;
+  padding: 7px 7.3px;
+}
+
+.group {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-attachment: fixed;
+  /* height: 90px;
+  width: 90px; */
+}
+
+
+.montserrat-normal-white-18-7px {
+    color: var(--white);
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+  }
+
+  .montserrat-normal-white-23-2px {
+    color: var(--white-2);
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-l);
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+  }
+
+  :root {
+    --black: 
+  rgba(0, 0, 0, 1);
+    --gravel: 
+  rgba(75, 75, 75, 1);
+    --white-2: 
+  rgba(255, 255, 255, 0.741);
+    --white: 
+  rgba(255, 255, 255, 1);
+  
+    --font-size-m: 18.7px;
+    --font-size-l: 23.2px;
+    --font-size-xl: 30.7px;
+  
+    --font-family-montserrat: "Montserrat";
+  }
+
+ 

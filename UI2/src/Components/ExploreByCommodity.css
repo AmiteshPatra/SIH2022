@@ -1,0 +1,65 @@
+#ebchead {
+    position: relative;
+    background: #FFFF5B;
+    box-sizing: border-box;
+    position: relative;
+    width: 479px;
+    height: auto;
+    border-radius: 66px;
+    transform: rotate(-0.37deg);
+    margin-top: 50px;
+    padding: 3px;
+    margin-left: -26px;
+    border-radius: 66px;
+    transform: rotate(-0.37deg);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.0918242px;
+    max-width: 100%;
+    /* max-height: auto; */
+}
+
+.comcolumn {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+}
+
+#comwheat {
+    position: relative;
+    background: #242424;
+    border-radius: 22px;
+    width: 285px;
+    height: 100px;
+    margin: 39px;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 43px;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.0918242px;
+    
+    color: #FFFFFF;
+
+}
+
+@media (max-width: 1280px) {
+    .comcolumn {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #comwheat {
+        margin-left: 95px;
+    }
+}

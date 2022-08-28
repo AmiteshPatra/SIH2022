@@ -29,8 +29,7 @@ const MainInput = (props) => {
       return (<CustomerHome productId={product_id} product_name = {props.product_name} getRawProductDetails = {props.getRawProductDetails} raw_products = {props.raw_products} getRawProductName = {props.getRawProductName} product_name_array = {props.product_name_array} />);
     }
       else
-      {
-      return (
+      {return (
     <div>
       <form className="d-flex" onSubmit={onSubmitValue}>
         <input

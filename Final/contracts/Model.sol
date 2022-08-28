@@ -61,6 +61,7 @@ contract Model {
         string processed_product_selling_date;
         string processed_product_description;
         uint[] raw_batch_no;
+        string[] preprocessed_processes;
     }
 
     mapping(uint => PreProcessorDetails) public preProcessorDetailsMap;
@@ -68,7 +69,8 @@ contract Model {
     function addPreProcessorDetails(
         uint[3] memory _uint_args,
         string[6] memory _string_args,
-        uint[] memory _raw_batch_no
+        uint[] memory _raw_batch_no,
+        string[] memory _preprocessed_processes
     ) public {
         preProcessorDetailsMap[_uint_args[0]] = PreProcessorDetails(
                                                     _uint_args[0],
@@ -80,7 +82,8 @@ contract Model {
                                                     _string_args[3],
                                                     _string_args[4],
                                                     _string_args[5],
-                                                    _raw_batch_no);
+                                                    _raw_batch_no,
+                                                    _preprocessed_processes);
         
         addPreProcessorHashDetails(_uint_args[0], _raw_batch_no);
     }
@@ -98,6 +101,7 @@ contract Model {
         string manufactured_product_exp_date;       //9                
         string manufactured_product_description;    //10                    
         uint[] raw_batch_no;                        //11
+        string[] manufactured_processes;            //12
     }
 
     mapping(uint => ManufacturerDetails) public manufacturerDetailsMap;
@@ -105,7 +109,8 @@ contract Model {
     function addManufacturerDetails(
         uint[4] memory _uint_args,
         string[7] memory _string_args,
-        uint[] memory _raw_batch_no
+        uint[] memory _raw_batch_no,
+        string[] memory _manufactured_processes
     ) public {
         manufacturerDetailsMap[_uint_args[0]] = ManufacturerDetails(
                                                     _uint_args[0],
@@ -119,7 +124,8 @@ contract Model {
                                                     _string_args[4],
                                                     _string_args[5],
                                                     _string_args[6],
-                                                    _raw_batch_no);
+                                                    _raw_batch_no,
+                                                    _manufactured_processes);
 
         addManufacturerHashDetails(_uint_args[0], _raw_batch_no);
     }

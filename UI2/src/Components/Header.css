@@ -1,0 +1,44 @@
+.logo {
+    min-height: auto;
+    min-width: auto;
+    max-width: 137px;
+    max-height: 59px;
+}
+
+
+
+.home {
+    background: #F3F3F3;
+    border-radius: 16.5375px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24.5px;
+    height: auto;
+    line-height: 30px;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.0918242px;
+    padding: 5px;
+    margin-left: 32px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-item{
+    padding-left: 32px;
+}
+
+@media (max-width: 768px) {
+    .home{
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+
+    .nav-item{
+        padding-left: 2%;
+    }
+}

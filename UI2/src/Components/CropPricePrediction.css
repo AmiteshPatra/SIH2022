@@ -1,0 +1,161 @@
+.detailsentrycpp {
+    position: relative;
+    background-color: #68FF5B;
+    box-sizing: border-box;
+    position: relative;
+    width: 479px;
+    height: auto;
+    border-radius: 66px;
+    transform: rotate(-0.37deg);
+    margin-top: 50px;
+    padding: 3px;
+    margin-left: -26px;
+    border-radius: 66px;
+    transform: rotate(-0.37deg);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.0918242px;
+    max-width: 100%;
+    /* max-height: auto; */
+}
+
+.dataentrycpp {
+    position: relative;
+    width: auto;
+    height: auto;
+    background: #242424;
+    border-radius: 22px;
+    margin-left: 26%;
+    margin-right: 26%;
+    margin-top: 50px;
+    margin-bottom: 24px ;
+    box-sizing: border-box;
+    padding-right: 21px;
+}
+
+.txt1cpp {
+    padding-top: 17px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 61px;
+    letter-spacing: 0.149917px;
+    
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.w2cpp {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: -25px;
+}
+
+.w3cpp {
+    background: linear-gradient(0deg, #4B4B4B, #4B4B4B), linear-gradient(0deg, #4B4B4B, #4B4B4B), #4B4B4B;
+    border-radius: 3.74793px;
+    position: relative;
+    width: 550px;
+    margin-left: 35px;
+    text-align: center;
+}
+
+
+.txt2cpp {
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25.9761px;
+    line-height: 43px;
+/* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.225652px;
+
+    color: rgba(0, 0, 0, 0.74);
+    padding: 4px;
+
+}
+
+.btn1cpp{
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29.9865px;
+    line-height: 54px;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.283784px;
+    min-width: 270px;
+    min-height: 40px;
+    border-radius: 4px;
+    transition: 0.5s;
+    margin-top: 24px;
+    margin-bottom: 24px ;
+    color: #fff;
+    background: linear-gradient(0deg, rgba(0, 255, 0, 0.59), rgba(0, 255, 0, 0.59)), linear-gradient(0deg, #4B4B4B, #4B4B4B), #4B4B4B;
+    border-radius: 7.0946px;
+    
+ 
+}
+
+.btn1cpp:hover {
+    color: #00FF00;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.prediction {
+    background: #F3F3F3;
+    border-radius: 16.5375px;
+    padding: 11px 14px 0px 14px;
+    height: auto;
+    width: auto;
+    min-width: 427px;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 38px;
+    margin-top: 38px;
+}
+
+#predictedprice {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.225652px;
+    
+    color: #077907;
+    margin-bottom: 11px;
+
+}
+
+@media (max-width: 768px) {
+
+    .detailsentrycpp{
+        font-size: 20px;
+    }
+
+    .dataentrycpp {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .w3cpp{
+        width: 90%;
+    }
+}

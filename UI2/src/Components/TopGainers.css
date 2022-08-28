@@ -1,0 +1,131 @@
+#topgainer {
+    box-sizing: border-box;
+    position: relative;
+    width: 476px;
+    height: auto;
+    border-radius: 66px;
+    transform: rotate(-0.37deg);
+    margin-top: 50px;
+    padding: 3px;
+    margin-left: -26px;
+    background: #78FF78;
+    border-radius: 66px;
+    transform: rotate(-0.37deg);
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 43px;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.0918242px;
+    
+    color: #000000;
+}
+
+#gainerlist {
+
+    box-sizing: border-box;
+    position: relative;
+    margin: 1%;
+    background: #242424;
+    border-radius: 22px;
+    height: auto;
+    max-width: 1490px;
+    width: auto;
+    margin-top: 10px;
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 43px;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.0918242px;
+    
+    color: #FFFFFF;
+    padding-top: 19px;
+}
+
+.line {
+    border: 3px solid #969696;
+    height: 0px;
+    margin: 10px;
+}
+
+.itemname {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 43px;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.0918242px;
+    
+    color: #FFFFFF;
+    padding-bottom: 10px;
+}
+
+/* CSS for TopLosers */
+
+#toploser {
+    box-sizing: border-box;
+    position: relative;
+    width: 476px;
+    height: auto;
+    border-radius: 66px;
+    transform: rotate(-0.37deg);
+    margin-top: 50px;
+    padding: 3px;
+    margin-left: -26px;
+    background: #FF8484;
+    border-radius: 66px;
+    transform: rotate(-0.37deg);
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 43px;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.0918242px;
+    
+    color: #000000;
+}
+
+#loserlist {
+
+    box-sizing: border-box;
+    position: relative;
+    margin: 1%;
+    background: #242424;
+    border-radius: 22px;
+    height: auto;
+    max-width: 1490px;
+    width: auto;
+    margin-top: 10px;
+}
+
+
+@media (min-width: 1400px) {
+    #gainerlist {
+        max-width: 1490px;
+    }
+}
+
+@media (max-width: 768px) {
+    #gainerlist {
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+}
