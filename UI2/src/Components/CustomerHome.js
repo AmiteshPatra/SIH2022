@@ -5,6 +5,7 @@ import YellowBlock from "../Images/Group 5 (1).png";
 import BlueBlock from "../Images/Group 6 (2).png";
 import RawStage from "./RawStage"
 import ProcessingStage from "./ProcessingStage"
+import Product from "../Images/product.jpg"
 
 const CustomerHome = (props) => {
   const [page, changePage] = useState("")
@@ -16,6 +17,7 @@ const CustomerHome = (props) => {
 
 
   const loadRawDetails =(e)=> {
+    e.preventDefault()
     //props.getRawProductDetails()
     changePage("raw")
     // return (<RawStage raw_products = {props.raw_products} getRawProductName = {props.getRawProductName} product_name_array = {props.product_name_array} />);
@@ -41,7 +43,7 @@ const CustomerHome = (props) => {
           <div className="imgdisplay container col-12 col-md-6 col-lg-4">
             <img
               className="imgdisplay1"
-              src="https://cdn.anscommerce.com/image/tr:h-1355,w-1080,cm-pad_resize/data/BIKANERVALA/BIKANO1083_2.png"
+              src={Product}
               alt=""
             />
             <div id = "product_name">

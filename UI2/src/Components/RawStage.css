@@ -1,4 +1,11 @@
 /* CSS for RawStage */
+.raw_crop {
+    color: white
+}
+
+.raw_crop:hover {
+    color: blue
+}
 
 .rawstage {
     box-sizing: border-box;

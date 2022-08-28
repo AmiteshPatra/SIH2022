@@ -15,6 +15,8 @@ import ManufacturingDetail from "./Components/ManufacturingDetail";
 import RawStage from "./Components/RawStage";
 import ProcessingStage from "./Components/ProcessingStage"
 import MainInput from "./Components/MainInput"
+import HardwareFirebase from "./Components/HardwareFirebase"
+import QRCodeGenerator from "./Components/QRCodeGenerator"
 import Web3 from "web3";
 import {MODEL_ABI, MODEL_ADDRESS} from "./config";
 
@@ -106,13 +108,14 @@ class App extends Component {
             <Header />
             {/* <CustomerHome /> */}
             {/* <InputCategoryChoice /> */}
-             <InputForProducer addFarmerDetails = {this.addFarmerDetails} /> 
-             <InputForPreProcessor addPreProcessorDetails = {this.addPreProcessorDetails} /> 
-             <InputForManufacturer addManufacturerDetails = {this.addManufacturerDetails} /> 
+            {/* <InputForProducer addFarmerDetails = {this.addFarmerDetails} /> 
+                <InputForPreProcessor addPreProcessorDetails = {this.addPreProcessorDetails} /> 
+                <InputForManufacturer addManufacturerDetails = {this.addManufacturerDetails} /> */}
             {/* <ManufacturingDetail /> */}
             {/* <RawStage /> */}
             {/* <ProcessingStage />*/}
              <MainInput getProductDetails = {this.getProductDetails} product_name = {this.state.product_name} getRawProductDetails = {this.getRawProductDetails} raw_products = {this.state.raw_products} getRawProductName = {this.getRawProductName} product_name_array = {this.state.product_name_array}/> 
+            {/* <HardwareFirebase /> */}
             {/* <Routes>
                   <Route path="/home" element={<Home />} />
                   <Route path="/login" element={<Login />} />

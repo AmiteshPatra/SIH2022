@@ -11,22 +11,20 @@ const ProcessingStage = () => {
         <p className="material">PROCESS</p>
         <div className="line"></div>
         <div className="processingplace">
-          Balaji Gwalior
+          Nilons Gwalior
           <br />
         </div>
         <div className="process">
-          Cleaned Potato
+          Chopped Mangoes
           <br />
-          Fried Potato
+          Grinded Spices
           <br />
-          Seasoning
-          <br />
-          Baking
+          Added Oil & Spices
           <br />
         </div>
         <div className="line"></div>
         <div className="processingplace">
-          Balaji Nagpur
+          Nilons Nagpur
           <br />
         </div>
         <div className="process">

@@ -15,7 +15,7 @@ const ProductTracking = (props) => {
             src="https://www.macmillandictionary.com/external/slideshow/full/141151_full.jpg"
             alt=""
           />
-          WAFERS <br></br>
+          MANGOES <br></br>
           0x234fd4a4722ed2
         </div>
         <div className="baseinfo container col-12 col-md-6 col-lg-4">
